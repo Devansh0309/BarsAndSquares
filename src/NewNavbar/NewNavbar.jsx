@@ -9,7 +9,6 @@ import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -23,7 +22,6 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import "./NewNavbar.css"
-import {Link, useNavigate} from "react-router-dom"
 import HomeIcon from '@mui/icons-material/Home';
 import ButtonSound1 from "./ButtonSound/buttons.mp3"
 import ButtonSound2 from "./ButtonSound/button1.mp3"
@@ -81,8 +79,6 @@ function NewNavbar() {
   const audio1=new Audio(ButtonSound1)
 const audio2=new Audio(ButtonSound2)
 
- const navigate =useNavigate()
-
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -92,10 +88,9 @@ const audio2=new Audio(ButtonSound2)
     setOpen(false);
   };
   
-  const {sel,setSelect,setBox,modalShow,setModalShow,start,setStart}=useContext(GridContext)
+  const {sel,setSelect,setBox,setModalShow,setModalShow2,start,setStart}=useContext(GridContext)
 
-  const navItems=[{title:'Home',icon:<HomeIcon/>},
-    {title:'New Game',icon:<SportsEsportsIcon/>}, 
+  const navItems=[{title:'New Game',icon:<SportsEsportsIcon/>}, 
   {title:'How to Play?',icon:<LightbulbIcon/>},
   {title:'Options',icon:<SettingsIcon/>}, 
   {title:'Exit',icon:<LogoutIcon/>}]
@@ -110,9 +105,6 @@ const audio2=new Audio(ButtonSound2)
     }
     else if(title==='New Game' && sel==='Select size here'){
       alert('Select size')
-  }
-    else if(title==="Home"){
-      navigate("/")
     }
     else if(title==='Exit'){
         window.close()
@@ -120,8 +112,8 @@ const audio2=new Audio(ButtonSound2)
     else if(title==='Options'){
         setModalShow(true)
     }
-    else{
-        navigate("/aboutgame")
+    else if(title==='How to Play?'){
+        setModalShow2(true)
     }
   }
 
@@ -142,11 +134,11 @@ const audio2=new Audio(ButtonSound2)
             
           </IconButton>
           
-          {/* //dot and box name code here  */}
+          {/* //bars and boxes game code here  */}
     
-<div className="cont" onClick={()=>navigate("/")}>
+<div className="cont" onClick={()=>{}}>
   <Typography  variant="h4"  noWrap component="div" className="typewriter" >
-      𝕯𝖔𝖙 & 𝕭𝖔𝖝 𝕲𝖆𝖒𝖊 
+      Bars & Boxes 𝕲𝖆𝖒𝖊 
   </Typography>
   <img width="50" height='40' src="https://media.giphy.com/avatars/jaaaamesperrett/Dx0SbsMf7gjn.gif"/>
 </div>
@@ -170,9 +162,9 @@ const audio2=new Audio(ButtonSound2)
     <button type='button' onClick={()=>setStart(true)}>Start Game</button>}
   <Typography sx={{ display: { xs: 'none', sm: 'block' } }} 
     className="Navbartxt" variant="h6" noWrap component="div" 
-    title='How to play?' 
+    title='How to Play?' 
     onClick={(e)=>{handleNavClicks(e.target.title);audio2.play()}}>
-  <Link to="/aboutgame">About 𝕲ame</Link>
+      How to Play?
   </Typography>
 </Typography>
         </Toolbar>

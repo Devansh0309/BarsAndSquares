@@ -1,18 +1,19 @@
-import LeftDrawer from "./NewNavbar/NewNavbar";
 import Contexts from "./Contexts";
 import SquareGrid from "./Square Grid Box/SquareGrid";
-import { Route, Routes } from "react-router-dom";
-import HowToPlay from "./AboutGame/HowToPlay";
 import MyVerticallyCenteredModal from "./NewNavbar/OptionsDialogBox"
+import MyVerticallyCenteredModal2 from "./AboutGame/AboutDialogBox";
 import NewNavbar from "./NewNavbar/NewNavbar";
 
 function App() {
   return (
     <div className="App" style={{backgroundColor:'wheat',minHeight:'100vh'}}>
-      <Routes>
-      <Route path="/" element={<Contexts> <NewNavbar /><br /><MyVerticallyCenteredModal/><SquareGrid /></Contexts>}/>
-      <Route path="/aboutgame" element={<Contexts><NewNavbar /><MyVerticallyCenteredModal/><HowToPlay/></Contexts>}/>       
-      </Routes>
+      <Contexts>
+        <NewNavbar />
+        <br />
+        <MyVerticallyCenteredModal/>
+        <MyVerticallyCenteredModal2/>
+        <SquareGrid />
+      </Contexts>
     </div>
   );
 }

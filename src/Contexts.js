@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
-export const GridContext=React.createContext()
 import SquareSound from './NewNavbar/ButtonSound/shortSuccess.mp3'
+export const GridContext=React.createContext()
+
 
 function Contexts(props) {
 
@@ -18,6 +19,7 @@ function Contexts(props) {
     const [player,setPlayer]=useState('1')
     const [won,setWon]=useState('')
     const [modalShow, setModalShow] = React.useState(false);
+    const [modalShow2, setModalShow2] = React.useState(false);
     const [start,setStart]=useState(false)
     const audio3=new Audio(SquareSound)
 
@@ -349,7 +351,7 @@ function Contexts(props) {
   <GridContext.Provider value={{sel,setSelect,row,setRow,col,setCol,Box,setBox,player,setPlayer,horizontalButtons,
     setHorizontalButtons,verticalButtons,setVerticalButtons,player1Score,setPlayer1Score,player2Score,setPlayer2Score,
     squaresColors,setSquareColors,numberOfSquares,setNumberOfSquares,areAllClicked,setClick,won,setWon,modalShow,
-    setModalShow,start,setStart}}>
+    setModalShow,modalShow2, setModalShow2,start,setStart}}>
     {props.children}
 
   </GridContext.Provider>)

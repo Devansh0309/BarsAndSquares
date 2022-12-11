@@ -2,13 +2,11 @@ import React,{useContext,useEffect} from 'react'
 import './SquareGrid.css'
 import { GridContext } from '../Contexts';
 import ButtonSound2 from '../NewNavbar/ButtonSound/button1.mp3'
-import SquareSound from '../NewNavbar/ButtonSound/shortSuccess.mp3'
 
 function SquareGrid() {
     const {sel,setSelect,row,setRow,col,setCol,Box,setBox,player,setPlayer,horizontalButtons,setHorizontalButtons,verticalButtons,setVerticalButtons,player1Score,setPlayer1Score,player2Score,setPlayer2Score,squaresColors,setSquareColors,numberOfSquares,setNumberOfSquares,areAllClicked,setClick,won,setWon,setStart} = useContext(GridContext)
 
     const audio2=new Audio(ButtonSound2)
-    const audio3=new Audio(SquareSound)
 
     useEffect(()=>{
         setCol(sel.split("*").map(Number)[1])
@@ -41,8 +39,6 @@ function SquareGrid() {
         setPlayer1Score(0)
         setPlayer2Score(0)
         setPlayer('1')
-        // let rc=sel.split("*").map(Number)
-        // console.log("rc",rc,"r","c",row,col)
       },[row,col])  
       
     useEffect(()=>{
@@ -54,13 +50,6 @@ function SquareGrid() {
 
   return (
     <div className="Appe">
-     {/* {
-     if(sel!=='Select size here' && won===''){}
-     else if(sel==='Select size here' && won!==''){}
-     else if(sel!=='Select size here' && won!==''){}
-     else{}
-     } */}
-
     {sel!=='Select size here' && won===''?
     (<div>
       <div style={{display:'flex',flexWrap:'wrap',justifyContent:'center',alignItems:'center',gap:'50px'}}>
