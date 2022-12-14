@@ -53,14 +53,15 @@ function SquareGrid() {
     {sel!=='Select size here' && won===''?
     (<div>
       <div style={{display:'flex',flexWrap:'wrap',justifyContent:'center',alignItems:'center',gap:'50px'}}>
-      <div style={{backgroundColor:'green'}}>Player1: {player1Score}</div> 
-      <div style={{backgroundColor:'red'}}>Player2: {player2Score}</div>
+      <div style={{backgroundColor:'#eb5d5d'}}>Player1: {player1Score}</div> 
+      <div style={{backgroundColor:'#42c442'}}>Player2: {player2Score}</div>
       </div>
       <br/>
       <div className='chance'>
         Player {player} chance
         {/* {setTimeout(()=>`Player ${player} chance`,1000)} */}
       </div>
+      <br/>
       <div className='gridBox' 
       style={{height: `${80*(row+1)}px`,
         width: `${80*(col+1)}px`,display:"grid",
@@ -77,7 +78,7 @@ function SquareGrid() {
           style={{
             backgroundColor:
             `${verticalButtons[item].btncolor}`,
-          border:`${verticalButtons[item].active?'1px solid white':'none'}`}}
+          border:`${verticalButtons[item].active?'2px solid black':'none'}`,borderRadius:'15px'}}
     
           key={item} disabled={verticalButtons[item].isClicked} onClick={()=>{setClick(item,'vertical');areAllClicked(item,'vertical',player);audio2.play()}}></button>
         </div>
@@ -91,7 +92,7 @@ function SquareGrid() {
               style={{
                 backgroundColor:
                 `${horizontalButtons[item-Math.floor(item/(col+1))].btncolor}`,
-                border:`${horizontalButtons[item-Math.floor(item/(col+1))].active?'1px solid white':'none'}`}}
+                border:`${horizontalButtons[item-Math.floor(item/(col+1))].active?'2px solid black':'none'}`,borderRadius:'15px'}}
     
                key={item-Math.floor(item/(col+1))}  disabled={horizontalButtons[item-Math.floor(item/(col+1))].isClicked} onClick={()=>{setClick(item-Math.floor(item/(col+1)),'horizontal');areAllClicked(item-Math.floor(item/(col+1)),'horizontal',player);audio2.play()}}></button>
             </div>
@@ -108,8 +109,8 @@ function SquareGrid() {
             style={{
               backgroundColor:
               `${horizontalButtons[item-Math.floor(item/(col+1))].btncolor}`,
-              border:`${horizontalButtons[item-Math.floor(item/(col+1))].active?'1px solid white':'none'}`
-            }}
+              border:`${horizontalButtons[item-Math.floor(item/(col+1))].active?'2px solid black':'none'}`
+              ,borderRadius:'15px'}}
     
              key={item-Math.floor(item/(col+1))}
              disabled={horizontalButtons[item-Math.floor(item/(col+1))].isClicked} 
@@ -122,14 +123,14 @@ function SquareGrid() {
             <button className='sidebtn'
              style={{
               backgroundColor:`${verticalButtons[item].btncolor}`,
-              border:`${verticalButtons[item].active?'1px solid white':'none'}`}}
+              border:`${verticalButtons[item].active?'2px solid black':'none'}`,borderRadius:'15px'}}
     
              key={item} disabled={verticalButtons[item].isClicked} onClick={()=>{setClick(item,'vertical');areAllClicked(item,'vertical',player);audio2.play()}}></button>
             
     
-            <div className='innerBox' style={{backgroundColor:squaresColors[item-Math.floor(item/(col+1))].squarecolor,border:squaresColors[item-Math.floor(item/(col+1))].active?'1px solid white':'none'}}>
-              {(squaresColors[item-Math.floor(item/(col+1))].squarecolor==="green"?"Player-1":null)||
-              (squaresColors[item-Math.floor(item/(col+1))].squarecolor==="red"?"Player-2":null)}</div>
+            <div className='innerBox' style={{color:'black',backgroundColor:squaresColors[item-Math.floor(item/(col+1))].squarecolor,border:squaresColors[item-Math.floor(item/(col+1))].active?'2px solid black':'none',borderRadius:'5px'}}>
+              {(squaresColors[item-Math.floor(item/(col+1))].squarecolor==="#eb5d5d"?"Player-1":null)||
+              (squaresColors[item-Math.floor(item/(col+1))].squarecolor==="#42c442"?"Player-2":null)}</div>
             
           </div>
           </div>
@@ -139,7 +140,7 @@ function SquareGrid() {
       </div>
       )
     :sel==='Select size here' && won!==''?
-    <h3>{won}</h3>
+    <h3 className='result'>{won}</h3>
      :sel!=='Select size here' && won!==''?
      setWon(''):
      <div>
@@ -147,7 +148,7 @@ function SquareGrid() {
         Your browser does not support the audio element.
       </audio> */}
       <button type='button' onClick={()=>setSelect('2*3')} style={{backgroundColor: 'inherit',
-    fontSize: 'larger',color: '#354dc1'}}>Start 2 x 3 game</button>
+    fontSize: 'large',color: '#354dc1'}} className='start-default'>Start 2 x 3 game</button>
      </div>
     }
        {/* Idea for rendering square color on click of all neighbouring buttons: Create react components for four buttons surrounding innerbox or square which is to be colored and pass 'isClicked' prop to Button component i.e. <Button isClicked={}/> and from Button Component pass result of isClicked to a function in App.js whose result of allButtons clicked is passed as a prop to innerBox React component and then if allButtons clicked is true then change color of innerBox from innerBox react component there itself  */}

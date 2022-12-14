@@ -52,5 +52,44 @@
     padding: 0;
   }
   .chance{
-    
+    width:150px;
+    margin:auto;
+    animation:chance 2000ms infinite linear;
   }
+  @keyframes  chance{
+  0%{
+    background-color: rgb(86, 86, 178);
+    transform: scaleX(1);
+    color: white;
+    border-radius: 5px;
+  }
+  60% {
+    background-color: rgb(48, 48, 170);
+    transform: scaleX(1.3);
+    color:lightgrey;
+    border-radius: 5px;
+  }
+}
+  .start-default{
+    animation:start 2000ms infinite linear;
+  }
+  .result{
+    margin:auto;
+    width:200px;
+    animation:chance 1500ms infinite linear;
+  }
+  
+@keyframes  start{
+  0%{
+    background-color: rgb(86, 86, 178);
+    font-size: small;
+    color: white;
+    border-radius: 5px;
+  }
+  60% {
+    background-color: rgb(48, 48, 170);
+    font-size: larger;
+    color:lightgrey;
+    border-radius: 5px;
+  }
+}

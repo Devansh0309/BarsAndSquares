@@ -42,11 +42,11 @@ function Contexts(props) {
                 }
               }
               if(player==='1'){
-                temp[id].squarecolor='green'
+                temp[id].squarecolor='#42c442'
                 setPlayer1Score(player1Score+1)
               }
               else{
-                temp[id].squarecolor='red'
+                temp[id].squarecolor='#eb5d5d'
                 setPlayer2Score(player2Score+1)
               }
               setSquareColors(temp)
@@ -70,11 +70,11 @@ function Contexts(props) {
                 }
               }
               if(player==='1'){
-                temp[id-col].squarecolor='green'
+                temp[id-col].squarecolor='#eb5d5d'
                 setPlayer1Score(player1Score+1)
               }
               else{
-                temp[id-col].squarecolor='red'
+                temp[id-col].squarecolor='#42c442'
                 setPlayer2Score(player2Score+1)
               }
               setSquareColors(temp)
@@ -99,11 +99,11 @@ function Contexts(props) {
                 }
               }
               if(player==='1'){
-                temp[id-col].squarecolor='green'
+                temp[id-col].squarecolor='#eb5d5d'
                 setPlayer1Score(player1Score+1)
               }
               else{
-                temp[id-col].squarecolor='red'
+                temp[id-col].squarecolor='#42c442'
                 setPlayer2Score(player2Score+1)
               }
               setSquareColors(temp)
@@ -121,11 +121,11 @@ function Contexts(props) {
                 }
               }
               if(player==='1'){
-                temp[id].squarecolor='green'
+                temp[id].squarecolor='#eb5d5d'
                 setPlayer1Score(player1Score+1)
               }
               else{
-                temp[id].squarecolor='red'
+                temp[id].squarecolor='#42c442'
                 setPlayer2Score(player2Score+1)
               }
               setSquareColors(temp)
@@ -145,13 +145,13 @@ function Contexts(props) {
                 }
               }
               if(player==='1'){
-                temp[id].squarecolor='green'
-                temp[id-col].squarecolor='green'
+                temp[id].squarecolor='#eb5d5d'
+                temp[id-col].squarecolor='#eb5d5d'
                 setPlayer1Score(player1Score+2)
               }
               else{
-                temp[id].squarecolor='red'
-                temp[id-col].squarecolor='red'
+                temp[id].squarecolor='#42c442'
+                temp[id-col].squarecolor='#42c442'
                 setPlayer2Score(player2Score+2)
               }
               setSquareColors(temp)
@@ -175,11 +175,11 @@ function Contexts(props) {
                 }
               }
               if(player==='1'){
-                temp[id-Math.floor(id/(col+1))].squarecolor="green"
+                temp[id-Math.floor(id/(col+1))].squarecolor="#eb5d5d"
                 setPlayer1Score(player1Score+1)
               }
               else{
-                temp[id-Math.floor(id/(col+1))].squarecolor="red"
+                temp[id-Math.floor(id/(col+1))].squarecolor="#42c442"
                 setPlayer2Score(player2Score+1)
               }
               setSquareColors(temp)
@@ -202,11 +202,11 @@ function Contexts(props) {
                 }
               }
               if(player==='1'){
-                temp[id-Math.ceil(id/(col+1))].squarecolor="green"
+                temp[id-Math.ceil(id/(col+1))].squarecolor="#eb5d5d"
                 setPlayer1Score(player1Score+1)
               }
               else{
-                temp[id-Math.ceil(id/(col+1))].squarecolor="red"
+                temp[id-Math.ceil(id/(col+1))].squarecolor="#42c442"
                 setPlayer2Score(player2Score+1)
               }
               setSquareColors(temp)
@@ -229,11 +229,11 @@ function Contexts(props) {
                 }
               }
               if(player==='1'){
-                temp[id-Math.floor(id/(col+1))].squarecolor="green"
+                temp[id-Math.floor(id/(col+1))].squarecolor="#eb5d5d"
                 setPlayer1Score(player1Score+1)
               }
               else{
-                temp[id-Math.floor(id/(col+1))].squarecolor="red"
+                temp[id-Math.floor(id/(col+1))].squarecolor="#42c442"
                 setPlayer2Score(player2Score+1)
               }
               setSquareColors(temp)
@@ -251,11 +251,11 @@ function Contexts(props) {
                 }
               }
               if(player==='1'){
-                temp[id-Math.ceil(id/(col+1))].squarecolor="green"
+                temp[id-Math.ceil(id/(col+1))].squarecolor="#eb5d5d"
                 setPlayer1Score(player1Score+1)
               }
               else{
-                temp[id-Math.ceil(id/(col+1))].squarecolor="red"
+                temp[id-Math.ceil(id/(col+1))].squarecolor="#42c442"
                 setPlayer2Score(player2Score+1)
               }
               setSquareColors(temp)
@@ -275,13 +275,13 @@ function Contexts(props) {
                 }
               }
               if(player==='1'){
-                temp[id-Math.floor(id/(col+1))].squarecolor="green"
-                temp[id-Math.ceil(id/(col+1))].squarecolor="green"
+                temp[id-Math.floor(id/(col+1))].squarecolor="#eb5d5d"
+                temp[id-Math.ceil(id/(col+1))].squarecolor="#eb5d5d"
                 setPlayer1Score(player1Score+2)
               }
               else{
-                temp[id-Math.floor(id/(col+1))].squarecolor="red"
-                temp[id-Math.ceil(id/(col+1))].squarecolor="red"
+                temp[id-Math.floor(id/(col+1))].squarecolor="#42c442"
+                temp[id-Math.ceil(id/(col+1))].squarecolor="#42c442"
                 setPlayer2Score(player2Score+2)
               }
               setSquareColors(temp)
@@ -311,10 +311,10 @@ function Contexts(props) {
             temp2[i].active=false
           }
           if(player==='1'){
-            temp[id].btncolor="green"
+            temp[id].btncolor="red"
           }
           else{
-            temp[id].btncolor="red"
+            temp[id].btncolor="green"
           }
           setHorizontalButtons(temp)
           //or this?
@@ -334,10 +334,10 @@ function Contexts(props) {
             temp2[i].active=false
           }
           if(player==='1'){
-            temp[id].btncolor="green"
+            temp[id].btncolor="red"
           }
           else{
-            temp[id].btncolor="red"
+            temp[id].btncolor="green"
           }
           setVerticalButtons(temp)
           //or this?

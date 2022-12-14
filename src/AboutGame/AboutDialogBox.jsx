@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { GridContext } from "../Contexts";
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import { ListItemIcon } from '@mui/material';
+import About from './About.mp4'
 
 function MyVerticallyCenteredModal2() {
     console.log('hi')
@@ -32,6 +33,12 @@ function MyVerticallyCenteredModal2() {
         
         ᴛʜᴇ ɢᴀᴍᴇ ᴇɴᴅꜱ ᴡʜᴇɴ ᴀʟʟ ʟɪɴᴇꜱ ᴀʀᴇ ᴅʀᴀᴡɴ ᴀɴᴅ ʙᴏxᴇꜱ ᴀʀᴇ ᴄʟᴀɪᴍᴇᴅ. ᴛʜᴇ ᴘʟᴀʏᴇʀ ᴡɪᴛʜ ᴛʜᴇ ᴍᴏꜱᴛ ᴘᴏɪɴᴛꜱ ᴡɪɴꜱ. ɪꜰ ᴍᴏʀᴇ ᴛʜᴀɴ ᴏɴᴇ ᴘʟᴀʏᴇʀ ʜᴀꜱ ᴛʜᴇ ꜱᴀᴍᴇ ʜɪɢʜ ꜱᴄᴏʀᴇ, ᴛʜᴇ ɢᴀᴍᴇ ɪꜱ ᴀ ᴛɪᴇ.
         </p>
+        <h4>Video</h4>
+        <video width="320" height="240" controls>
+          <source src={About} type="video/mp4"/>
+          {/* <source src="mov_bbb.ogg" type="video/ogg"/> */}
+          Your browser does not support HTML video.
+        </video>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={onHide}>Close</Button>
