@@ -18,8 +18,8 @@ function Contexts(props) {
     const [player2Score,setPlayer2Score]=useState(0)
     const [player,setPlayer]=useState('1')
     const [won,setWon]=useState('')
-    const [modalShow, setModalShow] = React.useState(false);
-    const [modalShow2, setModalShow2] = React.useState(false);
+    const [modalShow, setModalShow] = useState(false);
+    const [modalShow2, setModalShow2] = useState(false);
     const [start,setStart]=useState(false)
     const audio3=new Audio(SquareSound)
 
@@ -52,6 +52,7 @@ function Contexts(props) {
               setSquareColors(temp)
               setNumberOfSquares(numberOfSquares+1)
               audio3.play()
+              
             }
             else{
               setPlayer(player==='1'?'2':'1')

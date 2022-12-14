@@ -138,28 +138,28 @@ const audio2=new Audio(ButtonSound2)
     
 <div className="cont" onClick={()=>{}}>
   <Typography  variant="h4"  noWrap component="div" className="typewriter" >
-      Bars & Boxes 𝕲𝖆𝖒𝖊 
+      Bars & Boxes Game
   </Typography>
   <img width="50" height='40' src="https://media.giphy.com/avatars/jaaaamesperrett/Dx0SbsMf7gjn.gif"/>
 </div>
         
         
 <Typography component="div"
- sx={{alignItems:"right",display:"flex",gap:"20px"}}>
+ sx={{alignItems:"right",display:"flex",gap:"40px"}}>
   <Typography sx={{ display: { xs: 'none', sm: 'block'  } }} className="Navbartxt" variant="h6" noWrap 
-    component="div" title='New Game' onClick={(e)=>{handleNavClicks(e.target.title);audio2.play()}} >New 𝕲ame
+    component="div" title='New Game' onClick={(e)=>{handleNavClicks(e.target.title);audio2.play()}} >New Game
   </Typography>
   {start?
     <select onChange={(e)=>{makeBox(e)
      }} value={sel} style={{color:'white',border:'none',background:'#4A00E0'}}>
-      <option value='Select size here'>𝕾elect 𝕾ize here</option>
+      <option value='Select size here'>Select Size here</option>
       <option value="2*3">2 x 3</option>
       <option value="3*4">3 x 4</option>
       <option value="4*5">4 x 5</option>
       <option value="5*6">6 x 7</option>
       <option value="7*8">7 x 8</option>
     </select>:
-    <button type='button' onClick={()=>setStart(true)}>Start Game</button>}
+    <button type='button' className='Navbartxt' onClick={()=>setStart(true)}>Start Game</button>}
   <Typography sx={{ display: { xs: 'none', sm: 'block' } }} 
     className="Navbartxt" variant="h6" noWrap component="div" 
     title='How to Play?' 

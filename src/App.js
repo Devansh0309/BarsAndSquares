@@ -8,11 +8,11 @@ function App() {
   return (
     <div className="App" style={{backgroundColor:'wheat',minHeight:'100vh'}}>
       <Contexts>
-        <NewNavbar />
+        <NewNavbar/>
         <br />
         <MyVerticallyCenteredModal/>
         <MyVerticallyCenteredModal2/>
-        <SquareGrid />
+        <SquareGrid/>
       </Contexts>
     </div>
   );
