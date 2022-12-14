@@ -104,7 +104,7 @@ const audio2=new Audio(ButtonSound2)
         setSelect('Select size here')
     }
     else if(title==='New Game' && sel==='Select size here'){
-      alert('Select size')
+      alert('Click Start Game or Select Size')
     }
     else if(title==='Exit'){
         window.close()
@@ -146,7 +146,7 @@ const audio2=new Audio(ButtonSound2)
         
 <Typography component="div"
  sx={{alignItems:"right",display:"flex",gap:"40px"}}>
-  <Typography sx={{ display: { xs: 'none', sm: 'block'  } }} className="Navbartxt" variant="h6" noWrap 
+  <Typography sx={{ display: { xs: 'none', sm: 'block'  },overflow:'visible'}} className="Navbartxt" variant="h6" noWrap 
     component="div" title='New Game' onClick={(e)=>{handleNavClicks(e.target.title);audio2.play()}} >New Game
   </Typography>
   {start?
@@ -159,8 +159,8 @@ const audio2=new Audio(ButtonSound2)
       <option value="5*6">6 x 7</option>
       <option value="7*8">7 x 8</option>
     </select>:
-    <button type='button' className='Navbartxt' onClick={()=>setStart(true)}>Start Game</button>}
-  <Typography sx={{ display: { xs: 'none', sm: 'block' } }} 
+    <button type='button' className='Navbartxt' onClick={()=>setStart(true)} style={{overflow:'visible'}}>Start Game</button>}
+  <Typography sx={{ display: { xs: 'none', sm: 'block' },overflow:'visible'}} 
     className="Navbartxt" variant="h6" noWrap component="div" 
     title='How to Play?' 
     onClick={(e)=>{handleNavClicks(e.target.title);audio2.play()}}>

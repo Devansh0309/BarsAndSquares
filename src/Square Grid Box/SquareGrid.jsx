@@ -57,8 +57,9 @@ function SquareGrid() {
       <div style={{backgroundColor:'red'}}>Player2: {player2Score}</div>
       </div>
       <br/>
-      <div>
+      <div className='chance'>
         Player {player} chance
+        {/* {setTimeout(()=>`Player ${player} chance`,1000)} */}
       </div>
       <div className='gridBox' 
       style={{height: `${80*(row+1)}px`,
@@ -142,10 +143,11 @@ function SquareGrid() {
      :sel!=='Select size here' && won!==''?
      setWon(''):
      <div>
-      <audio controls src={ButtonSound2}>
+      {/* <audio controls src={ButtonSound2}>
         Your browser does not support the audio element.
-      </audio>
-      <button type='button' onClick={()=>setSelect('2*3')}>Start 2 x 3 game</button>
+      </audio> */}
+      <button type='button' onClick={()=>setSelect('2*3')} style={{backgroundColor: 'inherit',
+    fontSize: 'larger',color: '#354dc1'}}>Start 2 x 3 game</button>
      </div>
     }
        {/* Idea for rendering square color on click of all neighbouring buttons: Create react components for four buttons surrounding innerbox or square which is to be colored and pass 'isClicked' prop to Button component i.e. <Button isClicked={}/> and from Button Component pass result of isClicked to a function in App.js whose result of allButtons clicked is passed as a prop to innerBox React component and then if allButtons clicked is true then change color of innerBox from innerBox react component there itself  */}

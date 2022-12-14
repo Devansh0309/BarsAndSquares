@@ -1,10 +1,11 @@
 
 .Navbartxt{
-    font-weight: 900;
+    font-weight: 500;
     background: -webkit-linear-gradient(rgb(208, 235, 235), white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color:#212121;
+    /* color:#212121; */
+    color:#FFFFFF;
     border:'0'
     }
     
@@ -27,8 +28,7 @@
     justify-content: left;
     align-items: center;
     height: 100%;
-     width: 70%;
-  
+    width: 70%;
     font-weight: bold;
     margin-left: 1%;
     /* border: 1px solid rgb(224, 30, 30); */
