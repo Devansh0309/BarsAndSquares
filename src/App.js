@@ -7,7 +7,7 @@ import './Square Grid Box/SquareGrid.css'
 
 function App() {
   return (
-    <div className="App" style={{backgroundColor:'wheat',minHeight:'100vh'}}>
+    <div className="App" style={{backgroundColor:'wheat',minHeight:'100vh',minWidth:'100vw'}}>
       <Contexts>
         <NewNavbar/>
         <MyVerticallyCenteredModal/>
