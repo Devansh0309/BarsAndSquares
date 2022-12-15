@@ -53,13 +53,12 @@ function SquareGrid() {
     {sel!=='Select size here' && won===''?
     (<div>
       <div style={{display:'flex',flexWrap:'wrap',justifyContent:'center',alignItems:'center',gap:'50px'}}>
-      <div style={{backgroundColor:'#eb5d5d'}}>Player1: {player1Score}</div> 
-      <div style={{backgroundColor:'#42c442'}}>Player2: {player2Score}</div>
+      <div style={{backgroundColor:'#eb5d5d',borderRadius:'5px'}}>Player1: {player1Score}</div> 
+      <div style={{backgroundColor:'#42c442',borderRadius:'5px'}}>Player2: {player2Score}</div>
       </div>
       <br/>
-      <div className='chance'>
+      <div className='chance' style={{backgroundColor:player==='1'?'#eb5d5d':'#42c442'}}>
         Player {player} chance
-        {/* {setTimeout(()=>`Player ${player} chance`,1000)} */}
       </div>
       <br/>
       <div className='gridBox' 
@@ -144,9 +143,6 @@ function SquareGrid() {
      :sel!=='Select size here' && won!==''?
      setWon(''):
      <div>
-      {/* <audio controls src={ButtonSound2}>
-        Your browser does not support the audio element.
-      </audio> */}
       <button type='button' onClick={()=>setSelect('2*3')} style={{backgroundColor: 'inherit',
     fontSize: 'large',color: '#354dc1'}} className='start-default'>Start 2 x 3 game</button>
      </div>

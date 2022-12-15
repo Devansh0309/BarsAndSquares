@@ -3,7 +3,6 @@ import SquareGrid from "./Square Grid Box/SquareGrid";
 import MyVerticallyCenteredModal from "./NewNavbar/OptionsDialogBox"
 import MyVerticallyCenteredModal2 from "./AboutGame/AboutDialogBox";
 import NewNavbar from "./NewNavbar/NewNavbar";
-import './Square Grid Box/SquareGrid.css'
 
 function App() {
   return (

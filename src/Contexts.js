@@ -42,11 +42,11 @@ function Contexts(props) {
                 }
               }
               if(player==='1'){
-                temp[id].squarecolor='#42c442'
+                temp[id].squarecolor='#eb5d5d'
                 setPlayer1Score(player1Score+1)
               }
               else{
-                temp[id].squarecolor='#eb5d5d'
+                temp[id].squarecolor='#42c442'
                 setPlayer2Score(player2Score+1)
               }
               setSquareColors(temp)
