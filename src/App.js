@@ -10,7 +10,6 @@ function App() {
     <div className="App" style={{backgroundColor:'wheat',minHeight:'100vh'}}>
       <Contexts>
         <NewNavbar/>
-        <br />
         <MyVerticallyCenteredModal/>
         <MyVerticallyCenteredModal2/>
         <SquareGrid/>

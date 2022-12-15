@@ -7,10 +7,10 @@
 .gridBox{
   height: 600px;
   width: 600px;
-  margin: auto auto;
+  margin: 0 auto;
   padding:5px;
   gap: 0;
-  position: relative;
+  position:relative;
   left: 20px;
   }
   
