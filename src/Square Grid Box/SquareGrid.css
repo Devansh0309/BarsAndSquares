@@ -117,4 +117,25 @@
       border-radius: 5px;
     }
   }
+  /* .App{
+    animation:screen 3000ms infinite linear;
+  }
+  @keyframes  screen{
+    0%{
+      background-color: wheat;
+    }
+    20% {
+      background-color:darkseagreen;
+      
+    }
+    40% {
+      background-color:rgb(87, 102, 211);
+    }
+    60%{
+      background-color:lightblue;
+    }
+    90%{
+      background-color:wheat;
+    }
+  } */
 
